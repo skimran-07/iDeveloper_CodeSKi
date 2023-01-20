@@ -7,14 +7,24 @@
   <title>My Assignment</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- <link href="https://fontawesome.com//your_path_to_version_6_files/css/fontawesome.css" rel="stylesheet"> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style1.css"> -->
+  <!-- <link rel="stylesheet" href="styleAS.css"> 1d2630"-->
 </head>
 
-<body>
+<body style="color: white; background-color: #1d2630">
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top me-auto  mb-lg-0   sticky-top  ">
     <div class="container-fluid ">
-      <a class="navbar-brand" href="#">iDeveloper</a>
+      <a class="navbar-brand " href="#">iDeveloper</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -22,13 +32,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active " aria-current="page" href="#">Home</a>
+            <a class="nav-link active " aria-current="page" href="#Home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="#">About</a>
+            <a class="nav-link  " aria-current="page" href="#Table">Table</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="#">Contact Us</a>
+            <a class="nav-link  " aria-current="page" href="#products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  " aria-current="page" href="#About">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#section-wrapper">Contact Us</a>
 
         </ul>
 
@@ -43,33 +59,69 @@
 
   <!-- Login Modal -->
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered ">
       <div class="modal-content">
-        <div class="modal-header bg-secondary">
+        <div class="modal-header bg-dark">
           <h1 class="modal-title fs-5 text-light" id="loginModalLabel">Login to iDeveloper</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body bg-light">
-          <form>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
+        <div class="lbox-wrapper">
+          <div class="modal-body lform-wrap  p-6">
+            <form action="" id="loginform" class=" needs-validation" novalidate autocomplete="off">
+              <div class="form-fields ">
+                <!-- <div class="col-10 col-md-8 mb-3"> -->
+                <!-- <label for="exampleInputEmail1" class="form-label"> <i class="fa-regular fa-envelope"></i>
+                                Email address </label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="abc@123" required>
+                            <div class="invalid-feedback">
+                                Please Enter Email Address
+                            </div> -->
+                <label for="exampleInputEmail1" class="form-label text-dark"> <i class="fa-solid fa-envelope"></i>
+                  Email Address </label>
+                <div class="lform-group ">
+                  <input type="email" class="email form-control" id="exampleInputEmail1" placeholder="Email ID"
+                    required>
+                  <div class="invalid-feedback">
+                    Please Enter Valid Email Address
+                  </div>
+                </div>
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <!-- </div> -->
+                <!-- <div class="col-10 col-md-8 mb-3">
+                            <label for="exampleInputPassword1" class="form-label"> <i class="fa-solid fa-lock"></i>
+                                Password</label> -->
+                <label for="exampleInputPassword1" class="form-label text-dark "> <i class="fa-solid fa-lock"></i>
+                  Password</label> -->
+                <div class="lform-group ">
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password"
+                    required>
+                  <div class="col-10 col-md-8 mb-3">
+                    <span class="eye " onclick="myEye()">
+                      <i id="hide1" class="fa-solid fa-eye"></i>
+                      <i id="hide2" class="fa-solid fa-eye-slash"></i>
+                    </span>
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Enter Password
+                  </div>
+                </div>
+                <!-- </div> -->
+              </div>
+              <!-- <div class="col-10 col-md-8 mb-3 form-check">
 
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn btn-outline-success border-dark click"
-            data-bs-dismiss="modal">Login</button>
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                <label class="form-check-label text-dark" for="exampleCheck1">Check me out</label>
+
+              </div> -->
+
+
+              <div class="modal-footer  justify-content-center mb-4">
+                <button type="submit" class="submit-button btn btn-success border-dark click"
+                  data-dismiss="modal">Login</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -78,153 +130,506 @@
 
   <!-- Signup Modal -->
   <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header bg-secondary">
+        <div class="modal-header bg-dark">
           <h1 class="modal-title fs-5 text-light" id="signupModalLabel">Create an iDeveloper Account</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body bg-light">
-          <form>
-            <div class="mb-3">
-              <label for="exampleInputEmail2" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword2" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword2">
-            </div>
-            <div class="mb-3">
-              <label for="cexampleInputPassword2" class="form-label">Confirm Password</label>
-              <input type="password" class="form-control" id="cexampleInputPassword2">
-            </div>
-
-
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn btn-outline-success border-dark click" data-bs-dismiss="modal">Create
-            Account</button>
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Add button -->
-  <div class="container bg-light">
-    <div class="mx-2 my-4 d-md-flex justify-content-md-between align-items-center">
-      <h2 class="text-info ">
-        <div class="head2 col-sm-6 col-md-12 col-lg-12 ">Table Records</div>
-      </h2>
-      <button class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#addModalToggle">
-        <div class="btnadd col-sm-6 col-md-12 col-lg-12 ">Add</div>
-      </button>
-    </div>
-
-    <!-- Forms Modal -->
-    <div class="modal fade" id="addModalToggle" aria-labelledby="addModalToggleLabel" tabindex="-1" aria-hidden="true"
-      style="display: none">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header bg-secondary">
-            <h1 class="modal-title fs-5 text-light" id="addModalToggleLabel">
-              Please fill this Form
-            </h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body bg-light">
-            <form action="#" id="formSubmission" method="get">
-              <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name">
+        <div class="lbox-wrapper">
+          <div class="modal-body  lform-wrap p-6">
+            <form action="" id="signupform" class="row justify-content-center mb-4 needs-validation" novalidate
+              autocomplete="off">
+              <div class="form-fields">
+                <!-- <div class="col-10 col-md-8 mb-3"> -->
+                <label for="exampleInputEmail2" class="form-label text-dark"> <i class="fa-solid fa-envelope"></i>
+                  Email Address</label>
+                <div class="lform-group ">
+                  <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp"
+                    placeholder="Email ID" required>
+                  <div class="invalid-feedback">
+                    Please Enter valid Email Address
+                  </div>
+                </div>
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <!-- </div> -->
+                <!-- <div class="col-10 col-md-8 mb-3"> -->
+                <label for="exampleInputPassword2" class="form-label text-dark"> <i class="fa-solid fa-lock"></i>
+                  Password </label>
+                <div class="lform-group ">
+                  <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Enter Password"
+                    required>
+                  <div class="col-10 col-md-8 mb-3">
+                    <span class="eye" onclick="myEye2()">
+                      <i id="shide1" class="fa-solid fa-eye"></i>
+                      <i id="shide2" class="fa-solid fa-eye-slash"></i>
+                    </span>
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Enter Password
+                  </div>
+                </div>
+                <!-- </div> -->
+                <!-- <div class="col-10 col-md-8 mb-3"> -->
+                <label for="cexampleInputPassword2" class="form-label text-dark"> <i class="fa-solid fa-lock"></i>
+                  Confirm Password</label>
+                <div class="lform-group ">
+                  <input type="password" class="form-control" id="cexampleInputPassword2" placeholder="Confirm Password"
+                    required>
+                  <div class="col-10 col-md-8 mb-3">
+                    <span class="eye" onclick="myEye3()">
+                      <i id="cshide1" class="fa-solid fa-eye"></i>
+                      <i id="cshide2" class="fa-solid fa-eye-slash"></i>
+                    </span>
+                  </div>
+                  <div class="invalid-feedback">
+                    Please Enter Confirm Password
+                  </div>
+                </div>
+                <!-- </div> -->
+              </div>
+              <div class=" modal-footer  justify-content-center mb-4">
+                <button type="submit" class="submit-button btn btn-success border-dark click">Create
+                  Account</button>
 
               </div>
-              <div class="mb-3">
-                <label for="age" class="form-label">Age</label>
-                <input type="number" class="form-control" id="age">
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email ID</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-              </div>
-              <div class="mb-3">
-                <label for="phone" class="form-label">Phone</label>
-                <input type="number" class="form-control" id="phone">
-              </div>
-
-          </div>
 
 
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-outline-success border-dark click" data-bs-target="#submitModalToggle2"
-              data-bs-toggle="modal">
-              Submit
-            </button>
             </form>
           </div>
         </div>
       </div>
     </div>
-    <!-- Thank you Modal -->
-    <div class="modal fade" id="submitModalToggle2" aria-labelledby="submitModalToggleLabel2" tabindex="-1"
-      aria-hidden="true" style="display: none">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="submitModalToggleLabel2">
-              <img src="tick.png" style=" width: 100px;
-            margin-top: -50px;
-            border-radius: 50%;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);" />
-              <h2>Thank You!</h2>
-            </h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+
+
+
+  <section id="Home">
+
+    <!-- Slide -->
+    <div id="carouselExampleDark" class="carousel carousel-light slide  carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="2000">
+          <img src="1.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1><strong>Ideation Sketching and low fidelity prototyping</strong></h1>
+            <p>I design and develop experiences that make people's lives simple.</p>
           </div>
-          <div class="modal-body modal-dialog-centered">
-
-
-            <p>Your details has been successfully submitted. Thanks!</p>
-
+        </div>
+        <div class="carousel-item">
+          <img src="2.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1><strong>Usability Testing and Quality assurance or audit</strong></h1>
+            <p>I design and develop experiences that make people's lives simple.</p>
           </div>
-          <div class="modal-footer">
-            <button class="btn btn-primary" data-bs-target="#" data-bs-toggle="modal">
-              OK
-            </button>
+        </div>
+        <div class="carousel-item">
+          <img src="3.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h1><strong>Desig Handoff</strong></h1>
+            <p>I design and develop experiences that make people's lives simple.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Welcome -->
+    <div class="container mt-4  p-4">
+      <div class="text-center">
+        <h1 class="disply-5"><strong>Welcome to iDeveloper</strong></h1>
+        <p>You will see how you can display the Records in a table by clicking Submit Button. </p><br>
+        <p>And you can also delete the record by clicking Remove button.</p>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+  <!-- Add button -->
+  <section id="Table">
+    <div class="container mt-5  p-5 ">
+      <div class="mx-4 my-4 d-md-flex justify-content-md-between align-items-center ">
+        <h2 class="text-info ">
+          <div class="head2 col-sm-6 col-md-12 col-lg-12 ">Table Records</div>
+        </h2>
+        <button class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#addModalToggle">
+          <div class="btnadd col-sm-6 col-md-12 col-lg-12 ">Add</div>
+        </button>
+      </div>
+
+      <!-- Forms Modal -->
+      <div class="modal fade" id="addModalToggle" aria-labelledby="addModalToggleLabel" tabindex="-1" aria-hidden="true"
+        style="display: none">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header  bg-dark">
+              <h1 class="modal-title fs-5 text-light" id="addModalToggleLabel">
+                Please fill this Form
+              </h1>
+              <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="lbox-wrapper">
+              <div class="modal-body  lform-wrap p-6 bg-light ">
+                <form action="" id="student-form" class="row justify-content-center mb-4 needs-validation" novalidate
+                  autocomplete="off">
+                  <div class="form-fields">
+                    <!-- <div class="col-10 col-md-8 mb-3 input-area"> -->
+                    <label for="name" class="form-label text-dark"><i class="fa-solid fa-user"></i> Name</label>
+                    <div class="lform-group ">
+                      <input class="form-control" id="name" type="text" name="" placeholder="Enter your Name" required>
+                      <div class="invalid-feedback">
+                        Please Enter your Name
+                      </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-10 col-md-8 mb-3 input-area"> -->
+                    <label for="age" class="text-dark">Age</label>
+                    <div class="lform-group ">
+                      <input class="form-control" id="age" type="number" name="" placeholder="Enter your Age" required>
+                      <div class="invalid-feedback">
+                        Please Enter your Age
+                      </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-10 col-md-8 mb-3 input-area"> -->
+                    <label for="email" class="text-dark"> <i class="fa-solid fa-envelope"></i> Email Address</label>
+                    <div class="lform-group ">
+                      <input class="form-control" id="email" type="email" name="" placeholder="Email ID" required>
+                      <div class="invalid-feedback">
+                        Please Enter Email Address
+                      </div>
+                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-10 col-md-8 mb-3 input-area"> -->
+                    <label for="phone" class="text-dark"> <i class="fa-solid fa-phone"></i> Phone</label>
+                    <div class="lform-group ">
+                      <input class="form-control" id="phone" type="number" name="" placeholder="Enter Phone Number"
+                        required>
+                      <div class="invalid-feedback">
+                        Please Enter Phone number
+                      </div>
+                    </div>
+                    <!-- </div> -->
+                  </div>
+                  <div class=" modal-footer justify-content-center mb-4">
+                    <input class="submit-button btn-success add-btn " type="submit" value="Submit">
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
 
+
     <!-- Table -->
-    <table id="data"
-      class="table  table-success table-striped-columns table-striped table-hover table-bordered border-primary table-responsive">
-      <thead>
-        <tr class="table-dark">
-          <th scope="col">Name</th>
-          <th scope="col">Age</th>
-          <th scope="col">Email ID</th>
-          <th scope="col">Phone</th>
-        </tr>
-      </thead>
-      <tbody>
 
-      </tbody>
-    </table>
+    <div class="container d-md-flex justify-content-md-between align-items-center" data-aos="fade-up">
+      <table id="data" class="table  table-bordered shadow p-3 mb-5 bg-body rounded  table-responsive  ">
+        <thead class="table-dark">
+          <tr id="header">
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Email ID</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody class="tbody" id="student-list">
+          <tr>
+            <td>Abc</td>
+            <td>22</td>
+            <td>abc@ursite.com</td>
+            <td>1234567</td>
+            <td>
+              <a href="#" class="btn btn-danger btn-sm remove ">Remove</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Xyz</td>
+            <td>22</td>
+            <td>xyz@ursite.com</td>
+            <td>1234567</td>
+            <td>
+              <a href="#" class="btn btn-danger btn-sm remove ">Remove</a>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+
+  </section>
+
+  <!-- 3D cards -->
+
+  <section id="products">
+    <h1 class="h-primary center p-5 ">Our Products</h1>
+    <div class="section over-hide" >
+      <div class="container border shadow p-3 mb-3  bg-dark rounded " >
+        <div class="row  justify-content-center" data-aos="zoom-in">
+          <div class="col-12 text-center align-self-center py-5">
+            <div class="section text-center py-5 py-md-0">
+              <input class="pricing" type="checkbox" id="pricing" name="pricing" />
+              <label for="pricing"><span class="block-diff"> Kayak &nbsp; &nbsp; &nbsp; &nbsp;<span
+                    class="float-right "> &nbsp; &nbsp; &nbsp; &nbsp; Drone </span></span></label>
+              <div class="card-3d-wrap mx-auto">
+                <div class="card-3d-wrapper">
+                  <div class="card-front">
+                    <div class="pricing-wrap">
+                      <h4 class="mb-5">Kayak</h4>
+                      <!-- <h2 class="mb-2"><sup>$</sup>39 / 4<sup>hrs</sup></h2> -->
+                      <p class="mb-4">A Kayak is a narrow one- or two-person boat that is propelled with a double-ended
+                        paddle.</p>
+                      <p class="mb-4"> &nbsp; Kayak are built from covered wooden frames <br> or from shells of
+                        fiberglass or plastic.</p>
+                      <p class="mb-2">To Know More & Get a Quote.</p>
+                      <!-- <p class="mb-1"><i class="uil uil-location-pin-alt size-22"></i></p> -->
+                      <!-- <p class="mb-4">Drina, Serbia</p> -->
+                      <a href="#section-wrapper" class="link">Contact Us</a>
+                      <div class="img-wrap img-2">
+                        <img src="sea.png" alt="">
+                      </div>
+                      <div class="img-wrap img-1">
+                        <img src="kayak.png" alt="">
+                      </div>
+                      <div class="img-wrap img-3">
+                        <img src="water.png" alt="">
+                      </div>
+                      <!-- <div class="img-wrap img-6">
+                                            <img src="Stone.png" alt="">
+                                        </div> -->
+                    </div>
+                  </div>
+                  <div class="card-back">
+                    <div class="pricing-wrap">
+                      <h4 class="mb-5"> Drone</h4>
+                      <!-- <h2 class="mb-2"> 8<sup>hrs</sup></h2> -->
+                      <p class="mb-2">Can carry: – Gopro, Thermal/night vision and even small cameras upto 300g.</p>
+                      <p class="mb-2">Endurance: 50 minutes.</p>
+                      <p class="mb-2">Payload capacity: 0.3 Kg.</p>
+                      <p class="mb-4">Cruise speed: 10 m/s.</p>
+                      <p class="mb-2">To Know More & Get a Quote.</p>
+                      <a href="#section-wrapper" class="link">Contact Us</a>
+                      <div class="img-wrap img-2">
+                        <img src="grass.png" alt="">
+                      </div>
+                      <div class="img-wrap img-4">
+                        <img class="drone" src="drone1.png" alt="">
+                      </div>
+                      <div class="img-wrap img-5">
+                        <img src="Ivy.png" alt="">
+                      </div>
+                      <div class="img-wrap img-7">
+                        <img src="IvyRock.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+
+  <section id="About">
+    <h1 class="h-primary center p-5 ">About Us</h1>
+    <div class="container my-4 border rounded">
+      <div class="row featurette d-flex justify-content-center align-items-center">
+        <div class="col-md-7" data-aos="fade-right">
+          <h2 class="featurette-heading">It all started with iDeveloper's Idea. <span class="text-muted">It’ll
+              blow
+              your
+              mind.</span></h2>
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora iusto
+            suscipit illum
+            excepturi harum alias nisi? Officia, sequi assumenda ad repellat sunt laborum voluptatem minima
+            explicabo
+            perferendis voluptas rerum illum dolores?</p>
+        </div>
+        <div class="col-md-5" data-aos="fade-left">
+          <img class="img-fluid  shadow p-3 mb-3 bg-dark rounded" src="about-1.jpg" alt="">
+
+        </div>
+      </div>
+      <div class="row featurette d-flex justify-content-center align-items-center">
+        <div class="col-md-7 order-md-2" data-aos="fade-left">
+          <h2 class="featurette-heading">We started iDeveloper in 2020 <span class="text-muted">It’ll blow
+              your
+              mind.</span></h2>
+          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum architecto recusandae
+            commodi
+            obcaecati distinctio optio deserunt. Assumenda provident perferendis amet atque aliquam mollitia
+            doloremque
+            molestias ut exercitationem. Temporibus ratione blanditiis possimus sequi.</p>
+        </div>
+        <div class="col-md-5 order-md-1" data-aos="fade-right">
+          <img class="img-fluid  shadow p-3 mb-3 bg-dark rounded" src="about-2.jpg" alt="">
+
+        </div>
+      </div>
+      <div class="row featurette d-flex justify-content-center align-items-center">
+        <div class="col-md-7" data-aos="fade-right">
+          <h2 class="featurette-heading">iDeveloper Assignment UX. <span class="text-muted">It’ll blow your
+              mind.</span></h2>
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem omnis, sint
+            rerum labore
+            ullam excepturi asperiores? Quas officiis nobis illum deserunt voluptatibus nesciunt repellat
+            aut saepe
+            aspernatur, molestiae nihil numquam error ipsum.</p>
+        </div>
+        <div class="col-md-5" data-aos="fade-left">
+          <img class="img-fluid  shadow p-3 mb-3 bg-dark rounded" src="about-3.jpg" alt="">
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <div class="container my-4 mb-4" data-aos="zoom-in">
+    <section id="section-wrapper">
+      <h1 class="h-primary center p-5">Contact Us</h1>
+      <div class="box-wrapper border  ">
+        <div class="info-wrap">
+          <h2 class="info-title">Contact Information</h2>
+          <h3 class="info-sub-title">Fill up the form and our Team will get back to you within 24 hours</h3>
+          <ul class="info-details">
+            <li>
+              <i class="fas fa-phone-alt"></i>
+              <span>Phone:</span> <a href="tel:+ 1235 2355 98">+ 1235 2355 98</a>
+            </li>
+            <li>
+              <i class="fas fa-paper-plane"></i>
+              <span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a>
+            </li>
+            <li>
+              <i class="fas fa-globe"></i>
+              <span>Website:</span> <a href="#">yoursite.com</a>
+            </li>
+          </ul>
+          <ul class="social-icons">
+            <li><a href="https:facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <!-- <a href="https:facebook.com" target="_blank">go to facebook</a> -->
+            <li><a href="https:twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https:linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+          </ul>
+        </div>
+        <div class="form-wrap ">
+
+          <form action="#" id="contactform" class=" needs-validation " novalidate autocomplete="off">
+            <h2 class="form-title text-dark">Send us a message</h2>
+            <div class="form-fields">
+              <!-- <label for="fnmae" class="text-dark">Enter your First Name</label> -->
+              <div class="form-group">
+                <input type="text" class="fname form-control" id="contactInputFName1" placeholder="First Name" required>
+                <div class="invalid-feedback">
+                  Please Enter your First Name
+                </div>
+              </div>
+              <!-- <label for="lname" class="text-dark">Enter your Last Name</label> -->
+              <div class="form-group">
+                <input type="text" class="lname form-control" id="contactInputLName1" placeholder="Last Name" required>
+                <div class="invalid-feedback">
+                  Please Enter your Last Name
+                </div>
+              </div>
+              <!-- <label for="email" class="text-dark">Email ID</label> -->
+              <div class="form-group">
+                <input type="email" class="email form-control" id="contactInputEmail1" placeholder="Email ID" required>
+                <div class="invalid-feedback">
+                  Please Enter Valid Email Address
+                </div>
+              </div>
+              <!-- <label for="phone" class="text-dark">Enter your Phone Number</label> -->
+              <div class="form-group">
+                <input type="number" class="phone form-control" id="contactInputPhone" placeholder="Phone" required>
+                <div class="invalid-feedback">
+                  Please Enter Phone Number
+                </div>
+              </div>
+              <!-- <label for="message" class="text-dark">Message</label> -->
+              <div class="form-group">
+                <textarea class="form-control" id="contactFormControlTextarea1" rows="3"
+                  placeholder="Write your message" required></textarea>
+                <div class="invalid-feedback">
+                  Please Write a message
+                </div>
+              </div>
+
+            </div>
+            <input type="submit" value="Send Message" class=submit-button>
+          </form>
+        </div>
+      </div>
+    </section>
   </div>
 
-  <!--     <footer class="header-navbar navbar-expand-sm navbar navbar-with-menu fixed-bottom navbar-transparent navbar-shadow navbar-border">
-        <div class="center">
-            Copyright &copy; iDeveloper. All rights reserved! -->
-  </div>
+  <!-- footer -->
+
+  <!--   <footer
+    class="header-navbar navbar-expand-sm navbar navbar-with-menu stick-bottom navbar-transparent navbar-shadow navbar-border">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>Copyright &copy; 2022-2023 iDeveloper, Inc. <a href="#">Privacy</a> <a href="#">Terms</a></div>
+    </p>
+  </footer> -->
+
+  <footer
+    class="header-navbar navbar-expand-sm navbar navbar-with-menu stick-bottom navbar-transparent navbar-shadow navbar-border justify-content-center align-items-center">
+    <div class="center">
+      <p>Copyright &copy; iDeveloper. All rights reserved! --> &nbsp; <a href="#" class="btn">Back to top</a>
+        <!--       <p class="float-right"><a href="#">Back to top</a></p> -->
+      </p>
+      <!-- </div>
   </footer>
-  <script src="script.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-    crossorigin="anonymous"></script>
+
+  <-- script Start -->
+
+
+      <script src="script.js"></script>
+
+
+
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          offset: 300,
+          duration: 1000,
+        });
+      </script>
+
+
 </body>
 
 </html>
