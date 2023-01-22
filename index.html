@@ -386,8 +386,8 @@
 
   <section id="products">
     <h1 class="h-primary center p-5 ">Our Products</h1>
-    <div class="section over-hide" >
-      <div class="container border shadow p-3 mb-3  bg-dark rounded " >
+    <div class="section over-hide">
+      <div class="container border shadow p-3 mb-3  bg-dark rounded ">
         <div class="row  justify-content-center" data-aos="zoom-in">
           <div class="col-12 text-center align-self-center py-5">
             <div class="section text-center py-5 py-md-0">
@@ -542,42 +542,43 @@
         </div>
         <div class="form-wrap ">
 
-          <form action="https://formsubmit.co/codeski.com@gmail.com" id="contactform" class=" needs-validation " novalidate autocomplete="off" method="POST">
-            <input type="hidden" name="_captcha" value="false">
-               <input type="hidden" name="_next" value="https://skimran-07.github.io//thankyou.html">
+          <form action="https://formsubmit.co/codeski.com@gmail.com"  id="contactform"
+            class=" needs-validation " novalidate autocomplete="off" method="POST">
             <h2 class="form-title text-dark">Send us a message</h2>
             <div class="form-fields">
               <!-- <label for="fnmae" class="text-dark">Enter your First Name</label> -->
               <div class="form-group">
-                <input type="text" class="fname form-control" id="contactInputFName1" placeholder="First Name" required>
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500//thankyou.html">
+                <input type="text" name="first name" class="fname form-control" id="contactInputFName1" placeholder="First Name" required>
                 <div class="invalid-feedback">
                   Please Enter your First Name
                 </div>
               </div>
               <!-- <label for="lname" class="text-dark">Enter your Last Name</label> -->
               <div class="form-group">
-                <input type="text" class="lname form-control" id="contactInputLName1" placeholder="Last Name" required>
+                <input type="text" name="last name" class="lname form-control" id="contactInputLName1" placeholder="Last Name" required>
                 <div class="invalid-feedback">
                   Please Enter your Last Name
                 </div>
               </div>
               <!-- <label for="email" class="text-dark">Email ID</label> -->
               <div class="form-group">
-                <input type="email" class="email form-control" id="contactInputEmail1" placeholder="Email ID" required>
+                <input type="email" name="email" class="email form-control" id="contactInputEmail1" placeholder="Email ID" required>
                 <div class="invalid-feedback">
                   Please Enter Valid Email Address
                 </div>
               </div>
               <!-- <label for="phone" class="text-dark">Enter your Phone Number</label> -->
               <div class="form-group">
-                <input type="number" class="phone form-control" id="contactInputPhone" placeholder="Phone" required>
+                <input type="number" name="phone" class="phone form-control" id="contactInputPhone" placeholder="Phone" required>
                 <div class="invalid-feedback">
                   Please Enter Phone Number
                 </div>
               </div>
               <!-- <label for="message" class="text-dark">Message</label> -->
               <div class="form-group">
-                <textarea class="form-control" id="contactFormControlTextarea1" rows="3"
+                <textarea class="form-control" name="message" id="contactFormControlTextarea1" rows="3"
                   placeholder="Write your message" required></textarea>
                 <div class="invalid-feedback">
                   Please Write a message
@@ -585,7 +586,7 @@
               </div>
 
             </div>
-            <input type="submit" value="Submit" class=submit-button>
+            <input type="submit" value="Submit" class=submit-button id="submit">
           </form>
         </div>
       </div>
